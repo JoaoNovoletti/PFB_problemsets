@@ -1,0 +1,324 @@
+    1  ls
+    2  unzip semana1.zip
+    3  clear
+    4  ls
+    5  cd semana1
+    6  ls
+    7  cat hello-world.py
+    8  cat hello-world.c
+    9  python3 hello-world.py
+   10  cat readme.first
+   11  ls
+   12  g++ hello-world.c -o hello-world
+   13  ls
+   14  hello-world
+   15  ./hello-world
+   16  ls
+   17  [jnov@cen0336 bin]$ head
+   18  fav_chr_cuffdiff.txt
+   19  cat errors.txt
+   20  cat cuffdiff.txt
+   21  cl
+   22  clear
+   23  ls
+   24  rm fav_chr_cuffdiff.txt
+   25  ls
+   26  oi
+   27  ls
+   28  grep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   29  cat fav_chr_cuffdiff.txt
+   30  date
+   31  grep Chr9 cuffdiff.txt >> fav_chr_cuffidiff.txt
+   32  cat fav_chr_cuffidiff.txt
+   33  wget http://raw.githubusercontent.com/labbces/cen0336/master/master/files/sequences.nt.fa
+   34  wget http://raw.githubusercontent.com/labbces/cen0336/master/files/sequences.nt.fa
+   35  wc -l sequences.nt.fa
+   36  wc -c sequences.nt.fa
+   37  head 1 sequences.nt.fa
+   38  man head
+   39  head -n 1 sequences.nt.fa
+   40  pwd
+   41  ls
+   42  ls /
+   43  rkdir problemsetspwd
+   44  ls
+   45  pwd
+   46  mkdir problemsets
+   47  ls
+   48  man mv
+   49  rm fav_chr_cuffidiff.txt
+   50  ls
+   51  cd
+   52  cd problemsets
+   53  cd
+   54  cd bin
+   55  cd /bin
+   56  ls
+   57  cd
+   58  /home
+   59  cd /home
+   60  cd
+   61  cd /bin
+   62  cd ~/problemsets
+   63  cd /bin
+   64  cd ../home
+   65  cd
+   66  cd /bin
+   67  cd ../home/jnov/problemsets
+   68  cd
+   69  clear
+   70  ls
+   71  man mv
+   72  mv /home/jnov/cuffdiff.txt problemsets/
+   73  ls
+   74  ls problemsets/
+   75  cp errors.txt errors.txt 
+   76  ms sequences.nt.fa problemsets
+   77  mv sequences.nt.fa problemsets
+   78  cp /home/jnov/problemsets/cuffdiff.txt /home/jnov/
+   79  ls
+   80  cp problemsets
+   81  cb problemsets
+   82  cd problemsets
+   83  cd home
+   84  cd house
+   85  cd
+   86  cd /home
+   87  ce /home/jnov
+   88  pwd
+   89  cd
+   90  pwd
+   91  cd..
+   92  cd ..
+   93  ls
+   94  wc -w
+   95  wc -w /home
+   96  ls
+   97  cd
+   98  ls
+   99  cd problemsets/
+  100  ls
+  101  pwd
+  102  ls
+  103  wc -l < sequences.nt.fa 
+  104  wc -c < sequences.nt.fa 
+  105  head -n 1 sequences.nt.fa 
+  106  tail -n 3 sequences.nt.fa 
+  107  cat sequences.nt.fa 
+  108  grep '>' sequences.nt.fa 
+  109  man mv
+  110  mv sequences.nt.fa cancer_genes.fasta
+  111  ls
+  112  cat cuffdiff.txt 
+  113  head cuffdiff.txt 
+  114  grep 'log2(fold_change)'|sort > sorted.cuffdiff.out
+  115  grep 'log2(fold_change)' cuffdiff.txt | sort > sorted.cuffdiff.out
+  116  ls
+  117  cat sorted.cuffdiff.out 
+  118  rm sorted.cuffdiff.out 
+  119  ls
+  120  grep log
+  121  clear
+  122  cd ..
+  123  pwd
+  124  nano primeiro_arquivo_nano.txt
+  125  ls
+  126  cat primeiro_arquivo_nano.txt 
+  127  vi first_vi_file.txt
+  128  cat first_vi_file.txt 
+  129  vi first_vi_file.txt 
+  130  cat first_vi_file.txt 
+  131  vi first_vi_file.txt 
+  132  mkdir git_repository_joao
+  133  cd git_repository_joao/
+  134  git init
+  135  git remote add https://github.com/JoaoNovoletti/PFB_problemsets.git
+  136   git_repository_joao]$ git remote                                                                                                                                                add https://github.com/JoaoNovoletti/PFB_prob                                                                                                                                               lemsets.git
+  137  git remote add Problemsets_git https://github/JoaoNovoletti/PFB_problemsets.git
+  138  cd
+  139  cd git_repository_joao/
+  140  cd
+  141  ls
+  142  vi testegithub.txt
+  143  mv testegithub.txt git_repository_joao/
+  144  git status
+  145  cd git_repository_joao/
+  146  git status
+  147  mv testegithub.txt /home/jnov/
+  148  cd
+  149  ls
+  150  cd git_repository_joao/
+  151  git status
+  152  cd
+  153  mv testegithub.txt git_repository_joao/
+  154  cd git_repository_joao/
+  155  git status
+  156  git add testegithub.txt 
+  157  git commit -m 'adding a test'
+  158  git status
+  159  ls
+  160  cd git_repository_joao/
+  161  ls
+  162  git status
+  163  history
+  164  git commit -m 'adding a test'
+  165  history
+  166  history | grep clone
+  167  cd
+  168  mkdir Github_repositorio
+  169  ls
+  170  cd git_repository_joao/
+  171  cd
+  172  cd Github_repositorio/
+  173  echo "# PFB_problemsets" >> README.md
+  174  git init
+  175  git add README.md 
+  176  git commit -m "first commit"
+  177  git config --global user.email "joao.novoletti@usp.br"
+  178  git config --global user.name "Joao Novoletti"
+  179  git commit -m "first commit"
+  180  git branch -M main
+  181  git remote add origin https://github.com/JoaoNovoletti/PFB_problemsets.git
+  182  git push -u origin main
+  183  cd
+  184  ls
+  185  rm git_repository_joao/
+  186  rmdir git_repository_joao/
+  187  cd git_repository_joao/
+  188  ls
+  189  mv testegithub.txt /home/jnov/
+  190  ls
+  191  cd
+  192  ls
+  193  rmdir git_repository_joao/
+  194  man rmdir
+  195  rmdir --ignore-fail-on-non-empty git_repository_joao/
+  196  ls
+  197  rmdir git_repository_joao/
+  198  rmdir -r git_repository_joao/
+  199  cd git_repository_joao/
+  200  ls -al
+  201  cd ..
+  202  ls
+  203  rm -rf git_repository_joao/
+  204  ls
+  205  head cuffdiff.txt 
+  206  man sort
+  207  sort -k 10 cuffdiff.txt 
+  208  sort -k 10 cuffdiff.txt | head
+  209  man sort
+  210  sort -n -k 10 cuffdiff.txt | head
+  211  man sort
+  212  sort -n -r -k 10 cuffdiff.txt | head
+  213  ls
+  214  cd problemsets/
+  215  ls
+  216  sort -n -r -k 10 cuffdiff.txt > sorted.cuffdiff.out
+  217  ls
+  218  cat sorted.cuffdiff.out 
+  219  sort -n -r -k 10 cuffdiff.txt | head
+  220  ls
+  221  sort -n -r -k 10 cuffdiff.txt | headman head
+  222  man head
+  223  sort -n -r -k 10 cuffdiff.txt | head -n 100 > top100.sorted.cuffdiff.out
+  224  ls
+  225  cat top100.sorted.cuffdiff.out 
+  226  wc -l top100.sorted.cuffdiff.out 
+  227  man head
+  228  man cut
+  229  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d -f 1 > differentially.expressed.genes.txt
+  230  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f1 > differentially.expressed.genes.txt
+  231  cat differentially.expressed.genes.txt 
+  232  rm differentially.expressed.genes.txt 
+  233  ls
+  234  man cut
+  235  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f1 -s
+  236  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f21 -s
+  237  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f2 -s
+  238  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f10 -s
+  239  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -d: -f10
+  240  man cut
+  241  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -f1
+  242  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -f1,2
+  243  sort -n -r -k 10 cuffdiff.txt | head -n 100 | cut -f1 > differentially.expressed.genes.txt
+  244  cat differentially.expressed.genes.txt 
+  245  cd ..
+  246  ls
+  247  cd Github_repositorio/
+  248  git status
+  249  cd ..
+  250  cd problemsets/
+  251  ls
+  252  mv differentially.expressed.genes.txt /home/jnov/Github_repositorio/
+  253  ls
+  254  cd ..
+  255  cd Github_repositorio/
+  256  ls
+  257  git status
+  258  git add differentially.expressed.genes.txt 
+  259  fit status
+  260  git status
+  261  git commit -m "adding previous problem set files"
+  262  git push
+  263  git status
+  264  mkdir files
+  265  ls
+  266  ls /home/jnov
+  267  mv /home/jnov/problemsets/cancer_genes.fasta /home/jnov/Github_repositorio/files/
+  268  git status
+  269  git add files/cancer_genes.fasta 
+  270  git commit -m 'adding cancer_genes.fasta'
+  271  git push
+  272  vi mysequences.txt
+  273  cd Github_repositorio/
+  274  ls
+  275  vi >seqName description
+  276  ls
+  277  cd Github_repositorio/
+  278  vi Vim: Warning: Output is not to a terminal
+  279  vi mysequences.txt
+  280  git add mysequences.txt 
+  281  git commit -m "adicionando o mysequences"
+  282  git push
+  283  mkdir fastas
+  284  ls
+  285  cp files/cancer_genes.fasta fastas/
+  286  ls
+  287  cd fastas/
+  288  ls
+  289  cd..
+  290  cd ;;
+  291  cd ..
+  292  rm files/cancer_genes.fasta 
+  293  git add fastas/cancer_genes.fasta 
+  294  git commit -m "moving cancer_genes"
+  295  fit push
+  296  git push
+  297  vi oops.txt
+  298  git add oops.txt 
+  299  fit commit -m "adicionando o oops"
+  300  git commit "adicionando o oops"
+  301  git commit -m "adicionando o oops"
+  302  git push
+  303  git rm oops
+  304  git rm oops.txt 
+  305  hit commit -m "removing oops"
+  306  git commit -m "removing oops"
+  307  git push
+  308  vi oops2.txt
+  309  git add oops2.txt 
+  310  git commit -m "add oops2"
+  311  git push
+  312  rm oops2.txt 
+  313  git add oops2.txt
+  314  git commit -m "removing oops2"
+  315  git push
+  316  cat > never.txt
+  317  ls
+  318  vi never.txt 
+  319  git add never.txt 
+  320  git reset never.txt 
+  321  man rm
+  322  man cp
+  323  history
+  324  history > unixBasics.history.txt
