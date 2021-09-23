@@ -11,8 +11,8 @@ Complement=Complement.replace('W','G')
 
 RComDNA=Complement[::-1]
 
-print("Original sequence 5'"+DNA+"3'")
+print("Original sequence  5' "+DNA+" 3'")
 print()
-print("Complement 5'"+Complement+"3'")
+print("Complement         3' "+Complement+" 5'")
 print()
-print("Reverse Complement 5'"+RComDNA+"3'")
+print("Reverse Complement 5' "+RComDNA+" 3'")
