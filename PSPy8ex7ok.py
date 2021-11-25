@@ -157,12 +157,11 @@ with open ("Python_08.codons-6frames.nt", "r") as SeqCodonsframe:
 
 with open("Python_08.orf-longest.nt", "w") as LpepCodons:
   for seqspep in dadospepmaior:
-   
     for frame in seqscodons:
       for pepframe in re.finditer(rf"{seqspep}", frame):
         correctsequence = seqscodons[frame]
-        seqinicio = dadospepmaior[sequencia][0]*4
-        seqfim = dadospepmaior[sequencia][1]*4
+        seqinicio = dadospepmaior[seqspep][0]*4
+        seqfim = dadospepmaior[seqspep][1]*4
         subsequence = correctsequence[seqinicio:seqfim]
 
     fnomedogene = re.search(r"(c\d\w+)", seqspep)
