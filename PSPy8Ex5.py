@@ -1,18 +1,20 @@
 #!usr/bin/env python3
 
+#Importando os módulos necessários
 import re
 
+#Abrindo os dicionários e pegando o arquivo fasta da entrada do usuário.
 seqs={}
 codons={}
 arquivo = input('Arquivo fasta: ')
 
-
+#Abrindo arquivo, lendo e armazenando nos dicionário abertos
 with open(arquivo, "r") as R_arquivo:
   for line in R_arquivo:
     line = line.rstrip()
 
     if line[0] == '>':
-
+     #Reconhecendo o gene e armazenando seu nome
      achandogene = re.search(r">(\w+)\s", line)
      gene = (achandogene.group(1))
 
@@ -22,6 +24,7 @@ with open(arquivo, "r") as R_arquivo:
     else:
       seqs[gene] += line
 
+#Montando um dicionário com os genes e seus 6 frames
 for gene in seqs.keys():
   if gene not in codons.keys():
     codons[gene]={}
@@ -33,6 +36,7 @@ for gene in codons:
   codons[gene]["frame-5"] = re.findall(r"(.{3})",seqs[gene][-2::-1])
   codons[gene]["frame-6"] = re.findall(r"(.{3})",seqs[gene][-3::-1])
 
+#Escrevendo o arquivo Python_08.codons-6frames.nt a partir do dicionário codons
 with open ("Python_08.codons-6frames.nt", "w") as codonsframe3:
   for gene in codons:
     for frame in codons[gene]:
@@ -71,6 +75,7 @@ translation_table = {
     'TAA':'*', 'TGA':'*', 'TAG':'*'
 }
 
+#Abrindo o arquivo Python_08.codons-6frames.nt" novamente, dessa vez lendo e montando um dicionário (fiz esse passo pensando que pode ser destacado do código e modificado para usar em outro que não tenha os passos anteriores).
 with open("Python_08.codons-6frames.nt", "r") as R_arquivo:
   for line in R_arquivo:
     line = line.rstrip()
@@ -82,7 +87,7 @@ with open("Python_08.codons-6frames.nt", "r") as R_arquivo:
        seqscodons[geneframe]=''
     elif codonfound:
        seqscodons[geneframe] += line
-
+#Abrindo o arquivo Python_08.translated.aa e escrevendo nele a tradução dos códons
 with open ("Python_08.translated.aa", "w") as traducao:
   for geneframe in seqscodons:
     line = seqscodons[geneframe]

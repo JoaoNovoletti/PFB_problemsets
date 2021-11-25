@@ -1,12 +1,13 @@
 #!usr/bin/env python3
 
-#Começa o 4
+#Importando os módulos necessários 
 import re
 
 seqs={}
 codons={}
 arquivo = input('Arquivo fasta: ')
 
+#Abrind o arquivo e correspondendo o gene e a sequencia em um dicionário
 with open(arquivo, "r") as R_arquivo:
   for line in R_arquivo:
     line = line.rstrip()
@@ -22,6 +23,7 @@ with open(arquivo, "r") as R_arquivo:
     else:
       seqs[gene] += line
 
+#Montando um dicionário com os genes e seus 6 frames
 for gene in seqs.keys():
   if gene not in codons.keys():
     codons[gene]={}
@@ -33,6 +35,7 @@ for gene in codons:
   codons[gene]["frame-5"] = re.findall(r"(.{3})",seqs[gene][-2::-1])
   codons[gene]["frame-6"] = re.findall(r"(.{3})",seqs[gene][-3::-1])
 
+#Escrevendo o arquivo Python_08.codons-6frames.nt a partir do dicionário códons
 with open ("Python_08.codons-6frames.nt", "w") as codonsframe3:
   for gene in codons:
     for frame in codons[gene]:
@@ -43,7 +46,7 @@ with open ("Python_08.codons-6frames.nt", "w") as codonsframe3:
 
       codonsframe3.write(gene+'-'+frame+'-codons'+'\n'+frameseq+'\n')
 
-#Começa o 5
+#Montando um dicionário com as traduções dos códons
 
 seqscodons={}
 
@@ -71,6 +74,7 @@ translation_table = {
     'TAA':'*', 'TGA':'*', 'TAG':'*'
 }
 
+#Abrindo o arquivo Python_08.codons-6frames.nt" novamente, dessa vez lendo e montando um dicionário (fiz esse passo pensando que pode ser destacado do código e modificado para usar em outro que não tenha os passos anteriores).
 with open("Python_08.codons-6frames.nt", "r") as R_arquivo:
   for line in R_arquivo:
     line = line.rstrip()
@@ -83,6 +87,7 @@ with open("Python_08.codons-6frames.nt", "r") as R_arquivo:
     elif codonfound:
        seqscodons[geneframe] += line
 
+#Abrindo o arquivo Python_08.translated.aa e escrevendo nele a tradução dos códons
 with open ("Python_08.translated.aa", "w") as traducao:
   for geneframe in seqscodons:
     line = seqscodons[geneframe]
@@ -100,7 +105,7 @@ with open ("Python_08.translated.aa", "w") as traducao:
     traducao.write(geneframe + "-aa" + '\n' + translatedlist + '\n')
 
 
-#Começa o 6
+#Abrindo o arquivo Python_08.translated.aa e montando um duicionário com ele (fiz esse passo pensando que pode ser destacado do código e modificado para usar em outro que não tenha os passos anteriores).
 
 seqsAA = {}
 
@@ -120,6 +125,8 @@ with open("Python_08.translated.aa", "r") as R_arquivo:
 
 dadospepmaior = {}
 
+#Abrindo o arquivo Python_08.translated-longest.aa para a identificação do maior pepitideo em relação a todos os frames e escrevendo.
+#Nesse caso ele armazena também os dados do maior peptídeo, nome, começo e fim em um dicionário’
 with open ("Python_08.translated-longest.aa", "w") as Tlongest:
   for genaa in seqsAA:
     maior = 0
@@ -141,7 +148,8 @@ with open ("Python_08.translated-longest.aa", "w") as Tlongest:
       dadospepmaior[sequencia] = []
       dadospepmaior[sequencia].append(inicio)
       dadospepmaior[sequencia].append(fim)
-    
+
+#Abrindo novamente o Python_08.codons-6frames.nt e armazenando os dados, para não haver erros nas variáveis    
 seqscodons = {}
 with open ("Python_08.codons-6frames.nt", "r") as SeqCodonsframe:
   for line in SeqCodonsframe:
@@ -155,6 +163,7 @@ with open ("Python_08.codons-6frames.nt", "r") as SeqCodonsframe:
     elif codonfound:
        seqscodons[geneframe] += line
 
+#Abrindo o arquivo Python_08.orf-longest.nt e escrevendo nele o orf baseado na localização dele na sequencia de AAs do qual o maior pepitideo deriva.
 with open("Python_08.orf-longest.nt", "w") as LpepCodons:
   for seqspep in dadospepmaior:
     for frame in seqscodons:
