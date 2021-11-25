@@ -125,5 +125,5 @@ with open ("Python_08.translated-longest.aa", "w") as Tlongest:
         if tamanho > maior:
           maior = tamanho
           pepmaior = pep.group(0)
-    print(genaa + "-longest peptide" + '\n' + pepmaior)
+    
     Tlongest.write(genaa + "-longest_peptide" + '\n' + pepmaior + '\n')
